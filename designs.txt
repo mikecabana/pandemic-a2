@@ -1,0 +1,13 @@
+I decided to seperate and keep track of disease cubes and research stations in different classes. This would allow for better demonstration of the observer pattern as well as being as decoupled as posible and still having high cohesion. 
+
+Diseases 
+
+The disease class inherits from the subject class and acts as the observable object. It has 4 int variables to hold the count of each cube color along with associated getters and setters. When a setter function is called, Notify is also called to updae all the observers.
+
+ResearchStations
+
+The research station class also inherits from the subject class and acts as the observable object. It has 1 int variable to hold the count of station along with associated setters and getters. When a setter is called, Notify updates the observers.
+
+Driver
+
+A subject is created for Diseases and Research Stations. Then multiple observers are initialized and when anything is modified, Notify calls display and outputs the outputted data.  
